@@ -29,6 +29,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -36,6 +37,8 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--white);
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -199,11 +202,14 @@ h1, h2, h3, h4 {
 .hero {
     position: relative;
     min-height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=1920&h=1080&fit=crop') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=3840&h=1080&fit=crop') center/cover no-repeat fixed;
     margin-top: 60px;
+    left: 0;
+    overflow: hidden;
 }
 
 .hero-overlay {
@@ -262,8 +268,8 @@ h1, h2, h3, h4 {
 }
 
 .menu-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
@@ -289,6 +295,7 @@ h1, h2, h3, h4 {
 .menu-image img {
     width: 100%;
     height: 100%;
+    max-width: 100%;
     object-fit: cover;
     transition: var(--transition);
 }
@@ -331,8 +338,8 @@ h1, h2, h3, h4 {
 }
 
 .testimonials-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
@@ -380,8 +387,8 @@ h1, h2, h3, h4 {
 }
 
 .options-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
@@ -578,13 +585,14 @@ h1, h2, h3, h4 {
     /* Menu Grid */
     .menu-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
     }
     
     /* TESTIMONIALS - GRID ON DESKTOP */
     .testimonials-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 25px;
     }
     
@@ -625,27 +633,18 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
-   LARGE DESKTOP (min-width: 1024px)
+   RESPONSIVE GRIDS (override fixed columns)
    ============================================ */
 @media (min-width: 1024px) {
-    /* Section Titles */
+    .menu-grid,
+    .testimonials-grid,
+    .options-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    
     .section-title {
         font-size: 2.5rem;
-    }
-    
-    /* Menu Grid - 4 columns */
-    .menu-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    
-    /* TESTIMONIALS - GRID 4 columns on large desktop */
-    .testimonials-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    
-    /* Options Grid - 4 columns */
-    .options-grid {
-        grid-template-columns: repeat(4, 1fr);
     }
 }
 
