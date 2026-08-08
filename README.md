@@ -117,6 +117,7 @@ El archivo `app.js` incluye:
 - Hay un error tipográfico en la etiqueta `<srcript>` en `index.html` que debería ser `<script>`
 
 ## 📄 Licencia
+- contiene IA
 
 Este proyecto es solo para fines educativos y de demostración.
 
