@@ -1,126 +1,76 @@
-# Paraiso Tropical - Restaurant Landing Page
+# Plantilla de Landing Page con Reservas
 
-Una landing page moderna y responsiva para el restaurante "Paraiso Tropical", ubicado en Playa Bávaro, Punta Cana, República Dominicana. El sitio web presenta la gastronomía dominicana auténtica con vista al océano.
+Landing page lista para negocios que reciben citas o reservas: restaurantes, spas, salones de belleza, consultorios, hoteles pequeños, etc.
 
- Demo: https://pip3-00.github.io/Landing-page-de-conversion/
+- 100% HTML, CSS y JavaScript puro — sin frameworks, sin instalación.
+- Diseño mobile-first, rápido y responsive.
+- El formulario envía la reserva directo a tu WhatsApp, sin backend ni servidor.
+- Toda la personalización se hace en **un solo archivo**: `config.js`.
 
-![Paraiso Tropical](https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=1920&h=1080&fit=crop)
+## 🚀 Cómo personalizarla (5 minutos)
 
-## 📋 Características
+1. Abre el archivo **`config.js`** con cualquier editor de texto (VS Code, Notepad, etc.).
+2. Cambia los valores entre comillas por los datos de tu negocio:
+   - `businessName`, `heroTitle`, `heroSubtitle`
+   - `whatsappNumber` (código de país + número, sin `+` ni espacios. Ejemplo RD: `18095551234`)
+   - `address`, `email`, `hoursLine1`, `hoursLine2`
+   - `social` (enlaces a tus redes)
+3. Edita el arreglo `services` para tus productos o servicios (agrega o quita bloques `{ }` según necesites).
+4. Edita `testimonials` con reseñas reales de tus clientes.
+5. Edita `features` con tus propios diferenciadores.
+6. Guarda el archivo. **No necesitas tocar `index.html`, `styles.css` ni `app.js`.**
 
-- **Diseño Mobile-First**: Optimizado para dispositivos móviles desde su concepción
-- **Totalmente Responsivo**: Se adapta perfectamente a pantallas de escritorio, tablet y móvil
-- **Hero Section Impactante**: Imagen de fondo con overlay y animación de entrada
-- **Menú Destacados**: Grid de platos principales con precios
-- **Testimonios**: Reseñas de clientes en formato de tarjetas
-- **Sección de Características**: ¿Por qué visitar el restaurante?
-- **Formulario de Reservas**: Formulario completo para reservaciones
-- **Navegación Fija**: Header que permanece visible al hacer scroll
-- **Menú Hamburguesa**: Funcionalidad de menú móvil
-- **Smooth Scroll**: Desplazamiento suave entre secciones
+## 🖼️ Cambiar imágenes
 
-## 🛠️ Tecnologías Utilizadas
+Las imágenes de ejemplo vienen de Unsplash (gratuitas) solo para la demo. Para tu sitio real:
 
-- **HTML5**: Estructura semántica del sitio
-- **CSS3**: Estilos con variables CSS, flexbox y grid
-- **JavaScript (Vanilla)**: Interactividad sin dependencias externas
-- **Google Fonts**: Playfair Display y Poppins
-- **Imágenes**: Unsplash para imágenes de stock
+1. Sube tus propias fotos a una carpeta `images/` en el mismo proyecto.
+2. En `config.js`, reemplaza las URLs de `heroImage` y de cada `image` dentro de `services` por la ruta de tus fotos, ej. `images/mi-foto.jpg`.
 
-## 📁 Estructura del Proyecto
+## 🎨 Cambiar colores
 
-```
-landing pages-conversiones/
-├── index.html      # Archivo principal HTML
-├── styles.css      # Estilos CSS
-├── app.js          # Funcionalidad JavaScript
-└── README.md       # Documentación del proyecto
-```
-
-## 🚀 Cómo Usar
-
-### Ver el Proyecto Localmente
-
-1. Clona o descarga este repositorio
-2. Abre el archivo `index.html` en tu navegador
-
-```bash
-# O si tienes Python instalado, puedes usar un servidor local:
-python -m http.server 8000
-# Luego visita http://localhost:8000
-```
-
-### Personalización
-
-#### Cambiar Imágenes
-
-Las imágenes se encuentran en `index.html`. Busca las etiquetas `<img>` y `<background-url>` en `styles.css` para cambiar:
-
-- Hero: Línea 170 en `styles.css`
-- Platos del menú: En las tarjetas de `index.html`
-
-#### Colores del Tema
-
-En `styles.css`, sección `:root`, puedes modificar:
+Abre `styles.css` y edita las variables al principio del archivo (línea ~7):
 
 ```css
 :root {
-  --primary-color: #00796b; /* Verde caribe */
-  --secondary-color: #ff8f00; /* Naranja tropical */
-  --accent-color: #ffd54f; /* Amarillo dorado */
-  --ocean: #0077b6; /* Azul océano */
+    --primary-color: #00796B;
+    --secondary-color: #FF8F00;
+    ...
 }
 ```
 
-#### Datos del Restaurante
+Cambia los códigos de color y se actualiza todo el sitio automáticamente.
 
-Edita directamente en `index.html`:
+## 📱 Cómo funciona el botón de reserva
 
-- Nombre del restaurante (líneas 7, 25, 26)
-- Información de contacto (sección footer)
-- Horarios de operación
-- Platos del menú y precios
+Cuando alguien completa el formulario y presiona el botón, se abre WhatsApp (web o app) con un mensaje ya redactado con todos los datos de la reserva, listo para enviarte. No requiere servidor, correo ni base de datos.
 
-## 📱 Secciones del Sitio
+## 🌐 Cómo publicar tu sitio (gratis)
 
-| Sección             | Descripción                                       |
-| ------------------- | ------------------------------------------------- |
-| **Header**          | Logo, navegación y menú móvil                     |
-| **Hero**            | Título principal, subtítulo y llamada a la acción |
-| **Menú**            | Platos destacados con imágenes y precios          |
-| **Testimonios**     | Reseñas de clientes satisfechos                   |
-| **Características** | Ventajas del restaurante                          |
-| **Reservas**        | Formulario de reservación                         |
-| **Footer**          | Contacto, horarios y redes sociales               |
+**Opción 1 — GitHub Pages**
+1. Crea un repositorio en GitHub y sube estos 4 archivos.
+2. Ve a Settings → Pages → selecciona la rama principal.
+3. Tu sitio queda publicado en `tu-usuario.github.io/tu-repo`.
 
-## 🔧 Funcionalidades JavaScript
+**Opción 2 — Netlify o Vercel**
+1. Crea una cuenta gratuita.
+2. Arrastra la carpeta del proyecto al panel de "Deploy".
+3. Obtienes un enlace público al instante, con opción de dominio propio.
 
-El archivo `app.js` incluye:
+## 📄 Estructura del proyecto
 
-- **Toggle de Menú Móvil**: Abre/cierra el menú de navegación en dispositivos móviles
-- **Cerrar Menú al Clicar**: El menú se cierra automáticamente al seleccionar un enlace
-- **Smooth Scroll**: Desplazamiento suave hacia las secciones al hacer clic en los enlaces
+```
+├── index.html      → Estructura del sitio (no requiere edición)
+├── styles.css       → Estilos y colores
+├── config.js        → ⭐ Aquí editas TODO tu contenido
+├── app.js           → Lógica del sitio (no requiere edición)
+└── README.md         → Esta guía
+```
 
-## 🎨 Compatibilidad
+## Licencia de uso
 
-- Chrome (última versión)
-- Firefox (última versión)
-- Safari (última versión)
-- Edge (última versión)
-- iOS Safari
-- Chrome Android
-
-## 📝 Notas
-
-- El formulario de reservación es visual (no envía datos a ningún servidor)
-- Las imágenes son de Unsplash (licencia gratuita)
-- Hay un error tipográfico en la etiqueta `<srcript>` en `index.html` que debería ser `<script>`
-
-## 📄 Licencia
-- contiene IA
-
-Este proyecto es solo para fines educativos y de demostración.
+Esta plantilla puede usarse en un sitio web comercial por proyecto adquirido. La reventa o redistribución del código fuente como plantilla (en Gumroad, CodeCanyon u otras plataformas) no está permitida sin autorización del autor original.
 
 ---
 
-_Paraiso Tropical - Sabores del Caribe en Punta Cana_ 🌴🍹
+¿Necesitas ayuda personalizando tu sitio o quieres una versión con funciones adicionales (galería, blog, múltiples idiomas)? Contáctame.

@@ -1,6 +1,9 @@
 /* ============================================
-   MOBILE-FIRST DESIGN - Restaurant Landing Page
-   Punta Cana Restaurant
+   PLANTILLA DE LANDING PAGE CON RESERVAS
+   Mobile-first · Diseño personalizable desde config.js
+   Ideal para: restaurantes, spas, hoteles, salones,
+   consultorios y cualquier negocio que reciba citas
+   o reservas.
    ============================================ */
 
 /* CSS Variables */
@@ -198,6 +201,9 @@ h1, h2, h3, h4 {
 
 /* ============================================
    HERO SECTION
+   La imagen de fondo se aplica desde config.js
+   (propiedad heroImage) — no hace falta tocar
+   este archivo para cambiarla.
    ============================================ */
 .hero {
     position: relative;
@@ -206,7 +212,10 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=3840&h=1080&fit=crop') center/cover no-repeat fixed;
+    background-color: var(--primary-dark);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-top: 60px;
     left: 0;
     overflow: hidden;
