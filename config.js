@@ -12,12 +12,12 @@ const CONFIG = {
     logoIcon: "✨", // Puedes usar cualquier emoji como logo rápido
     heroTitle: "El título principal que llama la atención",
     heroSubtitle: "Una frase corta que explica qué ofreces y por qué elegirte",
-    heroImage:"./images/hero-image.png",
+    heroImage: "./images/hero-image.png",
 
     // --- WhatsApp (para el botón de reserva/contacto) ---
     // Formato: código de país + número, sin +, espacios ni guiones
     // Ejemplo República Dominicana: "18095551234"
-    whatsappNumber: "1809000000",
+    whatsappNumber: "18095551234",
 
     // --- Contacto y horarios ---
     address: "Tu dirección, Ciudad",
@@ -41,25 +41,25 @@ const CONFIG = {
             image: "./images/product-1.png",
             title: "Servicio o producto 1",
             description: "Describe brevemente en qué consiste este servicio o producto",
-            price: "$00"
+            price: "Consultar precio"
         },
         {
             image: "./images/product-2.png",
             title: "Servicio o producto 2",
             description: "Describe brevemente en qué consiste este servicio o producto",
-            price: "$00"
+            price: "Consultar precio"
         },
         {
             image: "./images/product-3.png",
             title: "Servicio o producto 3",
             description: "Describe brevemente en qué consiste este servicio o producto",
-            price: "$00"
+            price: "Consultar precio"
         },
         {
             image: "./images/product-4.png",
             title: "Servicio o producto 4",
             description: "Describe brevemente en qué consiste este servicio o producto",
-            price: "$00"
+            price: "Consultar precio"
         }
     ],
 
